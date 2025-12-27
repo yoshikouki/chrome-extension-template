@@ -7,7 +7,12 @@
  * @see https://developer.chrome.com/docs/extensions/reference/api/i18n
  */
 
-import type { MessageKey } from "./messages";
+import type {
+  MessageKey,
+  MessagePlaceholders,
+  MessageWithoutPlaceholders,
+  MessageWithPlaceholders,
+} from "./messages";
 
 export type {
   MessageKey,
