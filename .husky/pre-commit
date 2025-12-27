@@ -24,6 +24,10 @@ STASHED=$?
 bun x ultracite fix
 FORMAT_EXIT_CODE=$?
 
+# Run type check
+bun run typecheck
+TYPECHECK_EXIT_CODE=$?
+
 # Restore working directory state
 if [ $STASHED -eq 0 ]; then
   # Re-stage the formatted files
@@ -65,4 +69,9 @@ if [ "$STAGED_HASH" != "$NEW_STAGED_HASH" ]; then
   echo "✨ Files formatted by Ultracite"
 fi
 
-exit $FORMAT_EXIT_CODE
+# Exit with error if either failed
+if [ $FORMAT_EXIT_CODE -ne 0 ] || [ $TYPECHECK_EXIT_CODE -ne 0 ]; then
+  exit 1
+fi
+
+exit 0

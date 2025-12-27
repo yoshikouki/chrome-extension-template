@@ -9,6 +9,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
+    "typecheck": "tsc -b",
     "lint": "ultracite check",
     "format": "ultracite fix",
     "format:unsafe": "ultracite fix --unsafe",
