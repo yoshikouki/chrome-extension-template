@@ -10,8 +10,8 @@
 import type {
   MessageKey,
   MessagePlaceholders,
-  MessageWithPlaceholders,
   MessageWithoutPlaceholders,
+  MessageWithPlaceholders,
 } from "./messages";
 
 /**
@@ -64,7 +64,7 @@ export function getMessage(key: MessageWithoutPlaceholders): string;
  */
 export function getMessage<K extends MessageWithPlaceholders>(
   key: K,
-  substitutions: MessagePlaceholders[K],
+  substitutions: MessagePlaceholders[K]
 ): string;
 
 /**
@@ -72,7 +72,7 @@ export function getMessage<K extends MessageWithPlaceholders>(
  */
 export function getMessage(
   key: MessageKey,
-  substitutions?: string[] | (string | number)[],
+  substitutions?: string[] | (string | number)[]
 ): string {
   const subs = substitutions?.map(String);
   return chrome.i18n.getMessage(key, subs);

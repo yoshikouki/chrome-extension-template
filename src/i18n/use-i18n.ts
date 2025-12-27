@@ -5,14 +5,14 @@
 import { useCallback, useMemo } from "react";
 import {
   type DetectLanguageResult,
-  type MessageKey,
-  type MessagePlaceholders,
-  type MessageWithPlaceholders,
-  type MessageWithoutPlaceholders,
   detectLanguage,
   getAcceptLanguages,
   getMessage,
   getUILanguage,
+  type MessageKey,
+  type MessagePlaceholders,
+  type MessageWithoutPlaceholders,
+  type MessageWithPlaceholders,
 } from "./index";
 
 export interface UseI18nReturn {
@@ -23,7 +23,7 @@ export interface UseI18nReturn {
     (key: MessageWithoutPlaceholders): string;
     <K extends MessageWithPlaceholders>(
       key: K,
-      substitutions: MessagePlaceholders[K],
+      substitutions: MessagePlaceholders[K]
     ): string;
   };
   /**
@@ -68,12 +68,12 @@ export function useI18n(): UseI18nReturn {
       if (substitutions) {
         return getMessage(
           key as MessageWithPlaceholders,
-          substitutions as MessagePlaceholders[MessageWithPlaceholders],
+          substitutions as MessagePlaceholders[MessageWithPlaceholders]
         );
       }
       return getMessage(key as MessageWithoutPlaceholders);
     },
-    [],
+    []
   ) as UseI18nReturn["t"];
 
   return {

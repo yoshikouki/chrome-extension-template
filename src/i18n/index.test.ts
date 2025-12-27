@@ -33,7 +33,7 @@ describe("i18n", () => {
 
       expect(mockChrome.i18n.getMessage).toHaveBeenCalledWith(
         "hello",
-        undefined,
+        undefined
       );
       expect(result).toBe("Hello");
     });
@@ -90,7 +90,7 @@ describe("i18n", () => {
       const result = await detectLanguage("Hello, world!");
 
       expect(mockChrome.i18n.detectLanguage).toHaveBeenCalledWith(
-        "Hello, world!",
+        "Hello, world!"
       );
       expect(result).toEqual(detection);
     });
