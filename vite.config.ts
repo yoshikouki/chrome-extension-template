@@ -13,7 +13,11 @@ export default defineConfig({
     },
   },
   plugins: [
-    react(),
+    react({
+      babel: {
+        plugins: ["babel-plugin-react-compiler"],
+      },
+    }),
     crx({ manifest }),
     zip({ outDir: "release", outFileName: `crx-${name}-${version}.zip` }),
   ],
