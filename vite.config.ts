@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import path from "node:path";
 import { crx } from "@crxjs/vite-plugin";
 import react from "@vitejs/plugin-react";
@@ -21,5 +22,9 @@ export default defineConfig({
     cors: {
       origin: [/chrome-extension:\/\//],
     },
+  },
+  test: {
+    globals: true,
+    include: ["src/**/*.test.{ts,tsx}"],
   },
 });
