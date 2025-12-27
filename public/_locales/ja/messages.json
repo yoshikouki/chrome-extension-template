@@ -1,0 +1,52 @@
+{
+  "extName": {
+    "message": "Chrome 拡張機能テンプレート",
+    "description": "ブラウザに表示される拡張機能の名前"
+  },
+  "extDescription": {
+    "message": "React と TypeScript を使用したモダンな Chrome 拡張機能テンプレート",
+    "description": "ブラウザに表示される拡張機能の説明"
+  },
+  "hello": {
+    "message": "こんにちは",
+    "description": "挨拶メッセージ"
+  },
+  "world": {
+    "message": "世界",
+    "description": "「世界」という言葉"
+  },
+  "count": {
+    "message": "カウント: $COUNT$",
+    "description": "現在のカウント値を表示",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "clickToIncrement": {
+    "message": "クリックして増加",
+    "description": "カウンターを増加させるボタンのラベル"
+  },
+  "learnMore": {
+    "message": "$TOPIC$ についてもっと詳しく",
+    "description": "トピックについて詳しく学ぶためのリンクテキスト",
+    "placeholders": {
+      "topic": {
+        "content": "$1",
+        "example": "React"
+      }
+    }
+  },
+  "welcomeUser": {
+    "message": "ようこそ、$USER_NAME$ さん！",
+    "description": "ユーザー名を含む歓迎メッセージ",
+    "placeholders": {
+      "user_name": {
+        "content": "$1",
+        "example": "太郎"
+      }
+    }
+  }
+}

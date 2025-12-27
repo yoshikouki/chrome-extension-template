@@ -1,0 +1,52 @@
+{
+  "extName": {
+    "message": "Chrome Extension Template",
+    "description": "The name of the extension displayed in the browser"
+  },
+  "extDescription": {
+    "message": "A modern Chrome extension template with React and TypeScript",
+    "description": "The description of the extension displayed in the browser"
+  },
+  "hello": {
+    "message": "Hello",
+    "description": "A greeting message"
+  },
+  "world": {
+    "message": "World",
+    "description": "The word 'world'"
+  },
+  "count": {
+    "message": "count is $COUNT$",
+    "description": "Display the current count value",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "clickToIncrement": {
+    "message": "Click to increment",
+    "description": "Button label for incrementing the counter"
+  },
+  "learnMore": {
+    "message": "Learn more about $TOPIC$",
+    "description": "Link text to learn more about a topic",
+    "placeholders": {
+      "topic": {
+        "content": "$1",
+        "example": "React"
+      }
+    }
+  },
+  "welcomeUser": {
+    "message": "Welcome, $USER_NAME$!",
+    "description": "Welcome message with user name",
+    "placeholders": {
+      "user_name": {
+        "content": "$1",
+        "example": "John"
+      }
+    }
+  }
+}

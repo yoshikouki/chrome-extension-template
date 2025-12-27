@@ -3,8 +3,10 @@ import pkg from "./package.json";
 
 export default defineManifest({
   manifest_version: 3,
-  name: pkg.name,
+  name: "__MSG_extName__",
+  description: "__MSG_extDescription__",
   version: pkg.version,
+  default_locale: "en",
   icons: {
     48: "public/logo.png",
   },
