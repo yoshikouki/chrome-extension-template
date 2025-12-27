@@ -11,7 +11,7 @@
     "test:watch": "vitest",
     "lint": "ultracite check",
     "format": "ultracite fix",
-    "format:unsafe": "biome check --fix --unsafe",
+    "format:unsafe": "ultracite fix --unsafe",
     "prepare": "husky"
   },
   "dependencies": {

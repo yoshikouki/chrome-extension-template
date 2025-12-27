@@ -7,7 +7,9 @@
  * @see https://developer.chrome.com/docs/extensions/reference/api/i18n
  */
 
-import type {
+import type { MessageKey } from "./messages";
+
+export type {
   MessageKey,
   MessagePlaceholders,
   MessageWithoutPlaceholders,
@@ -28,13 +30,6 @@ export interface DetectLanguageResult {
     percentage: number;
   }>;
 }
-
-export type {
-  MessageKey,
-  MessagePlaceholders,
-  MessageWithPlaceholders,
-  MessageWithoutPlaceholders,
-};
 
 /**
  * Get a localized message by key (for messages without placeholders)
