@@ -4,6 +4,7 @@
 
 import { useCallback, useMemo } from "react";
 import {
+  type DetectLanguageResult,
   type MessageKey,
   type MessagePlaceholders,
   type MessageWithPlaceholders,
@@ -36,7 +37,7 @@ export interface UseI18nReturn {
   /**
    * Detect the language of given text
    */
-  detectLanguage: (text: string) => Promise<chrome.i18n.DetectLanguageResult>;
+  detectLanguage: (text: string) => Promise<DetectLanguageResult>;
 }
 
 /**

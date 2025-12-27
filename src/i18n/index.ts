@@ -14,6 +14,21 @@ import type {
   MessageWithoutPlaceholders,
 } from "./messages";
 
+/**
+ * Result of language detection from detectLanguage()
+ */
+export interface DetectLanguageResult {
+  /** Whether the detection is reliable */
+  isReliable: boolean;
+  /** Array of detected languages with their percentages */
+  languages: Array<{
+    /** ISO language code (e.g., "en", "ja") */
+    language: string;
+    /** Percentage of text in this language */
+    percentage: number;
+  }>;
+}
+
 export type {
   MessageKey,
   MessagePlaceholders,
@@ -103,9 +118,7 @@ export function getAcceptLanguages(): Promise<string[]> {
  * console.log(result.languages[0].language); // "en"
  * ```
  */
-export function detectLanguage(
-  text: string,
-): Promise<chrome.i18n.DetectLanguageResult> {
+export function detectLanguage(text: string): Promise<DetectLanguageResult> {
   return chrome.i18n.detectLanguage(text);
 }
 
